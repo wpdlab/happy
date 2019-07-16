@@ -20,11 +20,12 @@ const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), te
 
 async function main() {
     try {
-        const result = await rpc.get_block(30000);
-        console.log(result.timestamp);
-        console.log(result.producer);
+            const result = await rpc.get_block(300000);
+            console.log(result.timestamp);
+            console.log(result.producer);
+            console.log(result);
     } catch(error) {
         console.error(error);
     }
 }
-main();
+main()
